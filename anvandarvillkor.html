@@ -1,67 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Användarvillkor</title>
+    <title>Allmänna Villkor - EBB CENTER</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0 auto;
-            padding: 20px;
-            max-width: 1200px; /* Adjust based on your layout */
-        }
-
-        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6; /* Adjusted line spacing */
         }
-
-        .container {
-            padding: 10px;
+        header {
+            background-color: #1e73be;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
+        main {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ol ol {
+            counter-reset: subsection;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ol li {
+            margin-top: 30px;
+        }
+        li::before {
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            font-size: 18px; /* Adjusted font size for numbers */
+            margin-right: 5px; /* Space between number and text */
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            body {
+        }
+        ol ol li::before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection) " ";
+            font-size: 16px; /* Adjusted font size for sub-numbers */
+        }
+        h2 {
+            font-size: 22px; /* Adjusted font size for section titles */
+            margin-bottom: 10px; /* Space below section titles */
+            display: inline;
+            text-transform: uppercase; 
+        }
+        a {
+            color: #1e73be;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1e73be;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            main {
                 padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
+                margin: 10px;
             }
         }
     </style>
+
 </head>
 <body>
-    <div class="container">
-        <h1>Användarvillkor för EBB-Center</h1>
-        <p>Välkommen till EBB-Center! Dessa användarvillkor reglerar din användning av vår webbplats och våra tjänster. Genom att använda vår webbplats eller våra tjänster samtycker du till dessa villkor. Om du inte godkänner dessa villkor bör du avstå från att använda vår webbplats och våra tjänster.</p>
-        <h2>1. Användarkonto</h2>
-        <p>1.1 Du kan behöva skapa ett användarkonto för att få tillgång till vissa funktioner eller tjänster på vår webbplats. Du ansvarar för att skydda ditt användarnamn och lösenord och för all aktivitet som sker under ditt konto.</p>
-        <p>1.2 Du samtycker till att tillhandahålla korrekta och fullständiga uppgifter när du registrerar dig för ett användarkonto och att hålla dina kontouppgifter uppdaterade.</p>
-        <h2>2. Användarbeteende</h2>
-        <p>2.1 Du samtycker till att inte använda vår webbplats eller våra tjänster för att:</p>
-        <p>(a) Utöva olaglig verksamhet eller främja olagliga handlingar.</p>
-        <p>(b) Skicka eller distribuera skadliga, störande eller olämpliga material eller meddelanden.</p>
-        <p>(c) Störa driften av vår webbplats eller våra tjänster genom överbelastning, skadlig programvara eller annan teknisk störning.</p>
-        <h2>3. Immateriella rättigheter</h2>
-        <p>3.1 Allt innehåll på vår webbplats, inklusive text, bilder, grafik, logotyper och programvara, är skyddat av upphovsrätt och andra immateriella rättigheter som tillhör oss eller våra licensgivare. Du samtycker till att inte kopiera, distribuera eller på annat sätt använda vårt innehåll utan vårt uttryckliga tillstånd.</p>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
 
-        <!-- Additional Privacy Policy Content -->
-    </div>
+<header>
+    <h1>Allmänna Villkor för EBB CENTER Beta Program</h1>
+</header>
+
+<main>
+    <ol>
+        <li><h2>Inledning</h2>
+            <ol>
+                <li>Vi på Ebb Center  har utvecklat en digital tjänst inom området Viktminskning  som till del innefattar AI teknologi.</li>
+                <li>Bolaget avser nu erbjuda Tjänsten mot en sluten grupp personer i syfte att utveckla Tjänsten vidare inför en lansering på marknaden. Provperioden löper under en begränsad tid och är kostnadsfri.</li>
+                <li>Dessa allmänna villkor gäller mellan Bolaget och Testpersonerna under provperioden.</li>
+            </ol>
+        </li>
+        <li><h2>tjänsten och dess användning</h2>
+            <ol>
+                <li>Vi söker engagerade Testpersoner för att utvärdera vår holistiska metod för viktminskning som kombinerar medicinsk expertis med AI-assisterad vägledning. Syftet med Tjänsten är att samla in värdefull feedback för att förbättra och forma vår tjänst innan den officiellt lanseras på marknaden.Under Provperioden kommer du att få tillgång till vårt Beta Program, där du kommer att kunna utforska olika funktioner och verktyg som är utformade för att stödja dig på din viktminskningsresa. Vår AI-assistent kommer att vara tillgänglig för att ge personlig support och vägledning, medan våra erfarna läkare följer upp med dig regelbundet för att säkerställa din hälsa och välbefinnande..</li>
+                <li>För att kunna använda Tjänsten måste Testpersonerna registrera sig på Ebb Centers hemsida <a href="https://www.ebbcenter.com">www.ebbcenter.com</a></li>
+                <li>Testpersonerna måste vara minst 18 år för att delta i provperioden.</li>
+                <li>Testpersonerna deltar frivilligt i provperioden och deltagandet sker utan kompensation från bolaget. Testpersonerna kan närsomhelst upphöra sitt deltagande i provperioden.</li>
+            </ol>
+        </li>
+        <li><h2>Test Personernas åtaganden och ansvar</h2>
+            <ol>
+                <li>Testpersonerna samtycker till att bolaget inhämtar, sparar och använder data och resultat från provperioden för att vidareutveckla Tjänsten.</li>
+                <li>Testpersonerna frånsäger sig samtliga eventuella rättigheter som uppstår som ett resultat av sitt deltagande i Provperioden och kommer inte att göra gällande några rättigheter gentemot bolaget.</li>
+                <li>Testpersonerna ansvarar för att Tjänsten används i enlighet med Villkoren och vid var tid gällande rätt. Därtill förbinder sig Testpersonerna att
+                    <ol>
+                        <li>vid plötslig eller successiv försämring av det allmänna tillståndet ringa 1177 eller vid akuta tillstånd ringa 112;</li>
+                        <li>använda Tjänsten på ett lagligt sätt, enligt angivna instruktioner från Bolaget och med sunt förnuft;</li>
+                        <li>vid sin användning av Tjänsten, lämna uppgifter som är korrekta och som avser Testpersonerna samt tillse att uppgifterna är uppdaterade;</li>
+                        <li>inte bereda annan tillgång till Tjänsten eller deltagande i Provperioden utan inhämtande av uttryckligt samtycke från Bolaget;</li>
+                        <li>inte inom ramen för Tjänsten dela information som tillhör tredje man eller som gör intrång i tredje mans rättigheter, inbegripet immateriella rättigheter och företagshemligheter; och</li>
+                        <li>inte inom ramen för Tjänsten på något sätt överföra virus, trojaner eller annan skadlig mjukvara eller på annat sätt handla på ett sätt som kan ge upphov till skada eller olägenhet för Tjänsten eller Bolaget.</li>                        
+                    </ol> 
+                </li>
+            </ol>
+        </li>
+        <li><h2>Friskrivning och Ansvarsbegränsning</h2>
+            <ol>
+                <li>Bolaget utför Tjänsten med iakttagande av gällande lagstiftning och regelverk för hälso- och sjukvård.</li>
+                <li>Bolaget grundar sin rådgivning på de uppgifter som Testpersonerna lämnat till bolaget under sin användning av tjänsten. Testpersonerna ansvarar för att alla testpersoner tillhandahåller information som är korrekt.</li>
+                <li>Rådgivning inom ramen för Tjänsten kan ske med hjälp av AI-teknologi. Bolaget garanterar inte att Tjänsten, inbegripet rådgivning, kommer vara felfri eller utan störningar, att fel kommer åtgärdas inom viss tid eller att teknologin, inbegripet tredjepartsprodukt, är fri från skadliga komponenter eller virus.</li>
+                <li>Bolaget är inte skyldigt att utge ersättning till Testpersonerna med anledning av fel, brist, dataförlust eller annat avtalsbrott förutom när det följer av tvingande lagstiftning. Under alla omständigheter är bolagets ansvar begränsat till ansvar för styrkt, direkt skada och till ett maximalt belopp om tiotusen (10 000) kronor. Bolaget ansvarar inte för följdskador, utebliven vinst eller andra indirekta skador</li>
+                <li>Bolaget ansvarar inte för och ersätter inte skada till följd av strejk, eldsvåda, myndighetsutövning, arbetstvister, olyckshändelser, fel eller försening av tredjepartsleverantör, driftstopp i allmänna kommunikationssystem eller annan omständighet utanför Bolagets kontroll och som Bolaget skäligen inte förväntas räkna med och vars följder Bolaget inte skäligen kunnat undvika eller övervinna, s.k. Force Majeure.</li>
+                <li>Bolaget förbehåller sig rätten att när som helst ändra Tjänsten och Villkoren. Sådana ändringar kommer att meddelas via Hemsidan eller per e-post. Vid var tid gällande Villkor finns tillgängliga på Hemsidan.</li>
+            </ol>
+        </li>
+        <li><h2>Immateriella rättigheter</h2>
+            <ol>
+                <li>Bolaget äger samtliga rättigheter, inbegripet immateriella rättigheter, till Tjänsten och som skapas med anledning av Tjänsten som inte redan innehas av tredje man. Detta inbegriper samtliga publicerat och opublicerat material, Bolagets firmanamn och varumärke. Bolaget förbehåller sig samtliga rättigheter. Testpersonerna bekräftar och är införstådda med att ändring, kopiering eller spridning av Bolagets immateriella rättigheter utgör ett brott mot Villkoren och kan vara brottsligt enligt lag.</li>
+                <li>Samtliga immateriella rättigheter som uppstår genom Testpersonernas användning av Tjänsten under Provperioden tillfaller Bolaget med ensamrätt. Ensamrätten inkluderar Bolagets rätt att fritt ändra, vidareöverlåta eller vidareupplåta rättigheterna.</li>
+            </ol>
+        </li>
+        <li><h2>Personuppgifter</h2>
+            <ol>
+                <li>Bolaget använder sig av Testpersonernas personuppgifter i tillhandahållandet av Tjänsten. Exempel på personuppgifter är kontaktuppgifter, hälsouppgifter, digitalt beteende vid användning av Tjänsten och teknisk data såsom IP-adress etc.</li>
+                <li>För information om hur Bolaget hanterar Testpersonernas personuppgifter hänvisas till Bolagets <a href="https://ebb-center.github.io/website/integritetspolicy">Integritetspolicy</a>.</li>
+            </ol>
+        </li>
+        <li><h2>tvistelösning och tillämplig lag</h2>
+            <ol>
+                <li>Svensk rätt är tillämplig på Villkoren.</li>
+                <li>Tvister med anledning av Villkoren ska avgöras vid Göteborgs tingsrätt.</li>
+            </ol>
+        </li>
+    </ol>
+</main>
+
+<footer>
+    <p>&copy; 2024 EBB CENTER. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
