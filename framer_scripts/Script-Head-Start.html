@@ -1,0 +1,68 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("-----Head-Start1---DOMContentLoaded---")
+    const userLang = navigator.language || navigator.userLanguage; 
+    const languagePrefix = userLang.split('-')[0]; // Get the base language
+    const currentPath = window.location.pathname;
+    console.log("userLang --> " + userLang);
+    console.log("languagePrefix --> " + languagePrefix);
+    console.log("CurrentPath --> " + currentPath);
+
+    switch (languagePrefix) {
+      case 'en':
+        // English is default, do nothing unless on a specific language path that needs to return to root
+        if (currentPath !== '/' && !currentPath.startsWith('/sv')) {
+          console.log("Redirecting to /");
+          window.location.replace('/');
+        }
+        break;
+      case 'sv':
+        if (!currentPath.startsWith('/sv')) {
+          console.log("Redirecting to /sv");
+          window.location.replace('/sv');
+        }
+        break;
+      // Additional languages can be added as cases
+      default:
+        // If in a language-specific directory that isn't supported, redirect to English/default
+        if (currentPath !== '/' && currentPath !== '/sv') {
+          console.log("Redirecting to /");
+          window.location.replace('/');
+        }
+        break;
+    }
+  });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("-----Head-Start2---DOMContentLoaded---")
+  const userLang = navigator.language || navigator.userLanguage; 
+  console.log("userLang --> " + userLang);
+  const languagePrefix = userLang.split('-')[0]; // Get the base language
+  console.log("languagePrefix --> " + languagePrefix);
+  const buttonLink1 = document.querySelector('a[data-framer-name="CTA1"]'); // Select the button by one of its classes
+  console.log("buttonLink1 --> " + buttonLink1);
+
+  // If the button exists and the path is Swedish version, then update the button URL
+  if (buttonLink1 && window.location.pathname.includes('/sv')) {
+        console.log("Set buttonLink1 to Swedish: https://8dls9ph58mg.typeform.com/to/j3bXUijN");
+        buttonLink1.href = 'https://8dls9ph58mg.typeform.com/to/j3bXUijN';
+    } else {
+        console.log("Set buttonLink1 to English: https://8dls9ph58mg.typeform.com/to/cpbWgzlC");
+        buttonLink1.href = 'https://8dls9ph58mg.typeform.com/to/cpbWgzlC';
+  }
+
+  const buttonLink2 = document.querySelector('a[data-framer-name="CTA2"]'); // Select the button by one of its classes
+  console.log("buttonLink2 --> " + buttonLink2);
+
+  // If the button exists and the path is Swedish version, then update the button URL
+  if (buttonLink2 && window.location.pathname.includes('/sv')) {
+        console.log("Set buttonLink2 to Swedish: https://8dls9ph58mg.typeform.com/to/j3bXUijN");
+        buttonLink2.href = 'https://8dls9ph58mg.typeform.com/to/j3bXUijN';
+  } else {
+        console.log("Set buttonLink2 to English: https://8dls9ph58mg.typeform.com/to/cpbWgzlC");
+        buttonLink2.href = 'https://8dls9ph58mg.typeform.com/to/cpbWgzlC';
+  }
+  });
+
+</script>

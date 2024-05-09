@@ -1,0 +1,36 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to open the correct sign-up page
+  function openSignUpPage() {
+    const currentLang = document.documentElement.lang.split('-')[0];  // Get current page language
+    const languageUrls = {
+      en: "https://8dls9ph58mg.typeform.com/to/cpbWgzlC",
+      sv: "https://8dls9ph58mg.typeform.com/to/j3bXUijN",
+    };
+
+    // Determine the correct URL based on the page language
+    const url = languageUrls[currentLang] || languageUrls.en; // Default to English if no match
+
+    // Open the URL in a new tab
+    window.location.href = url;
+  }
+
+  // Attach event listeners to elements
+  const cta1 = document.querySelector('a[data-framer-name="CTA1"]');
+  const cta2 = document.querySelector('a[data-framer-name="CTA2"]');
+
+  if (cta1) {
+    cta1.addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent the default hyperlink action
+      openSignUpPage();  // Call the function to open the sign-up page
+    });
+  }
+
+  if (cta2) {
+    cta2.addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent the default hyperlink action
+      openSignUpPage();  // Call the function to open the sign-up page
+    });
+  }
+});
+</script>

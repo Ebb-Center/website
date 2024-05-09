@@ -1,0 +1,104 @@
+<script>
+
+const languageUrls = {
+  en: {
+    signup: "https://8dls9ph58mg.typeform.com/to/cpbWgzlC",
+    about: "https://ebb-center.github.io/website/omoss",
+    contact: "mailto:hello@ebbcenter.com",
+    terms: "https://ebb-center.github.io/website/anvandarvillkor",
+    privacypolicy: "https://ebb-center.github.io/website/integritetspolicy"
+  },
+  sv: {
+    signup: "https://8dls9ph58mg.typeform.com/to/j3bXUijN",
+    about: "https://ebb-center.github.io/website/omoss",
+    contact: "mailto:hello@ebbcenter.com",
+    terms: "https://ebb-center.github.io/website/anvandarvillkor",
+    privacypolicy: "https://ebb-center.github.io/website/integritetspolicy"
+  }
+  // Add more languages as needed
+};
+
+function updateLinks(languageCode) {
+  console.log("Updating the CTA links to Language: " + languageCode );
+  const links = languageUrls[languageCode];
+  document.querySelectorAll('a').forEach(a => {
+    const name = a.getAttribute('name');
+    if (name === 'CTA1') {
+      a.href = links.signup;
+    } else if (name === 'CTA2') {
+      a.href = links.signup;
+    } 
+  });
+}
+
+
+
+
+function updateLinks_OLD(languageCode) {
+  console.log("Updating the CTA links to Language: " + languageCode );
+
+  const links = languageUrls[languageCode]; // Get the correct set of URLs based on the selected language
+
+  // Use the name attribute to select elements and update href
+  console.log("Links --->  " + links);
+  //document.querySelector('a[data-framer-name="CTA1"]').href = links.signup;
+  //document.querySelector('a[data-framer-name="CTA2"]').href = links.signup;
+
+  const buttonLink1 = document.querySelector('a[data-framer-name="CTA1"]'); // Select the button by one of its classes
+  console.log("buttonLink1 --> " + buttonLink1);
+
+  // If the button exists, then update the button URL
+  if (buttonLink1) {
+        buttonLink1.href = links.signup;
+  };
+
+  console.log("Final result --> " + buttonLink1.href);
+
+
+  const buttonLink2 = document.querySelector('a[data-framer-name="CTA2"]'); // Select the button by one of its classes
+  console.log("buttonLink2 --> " + buttonLink2);
+
+  // If the button exists, then update the button URL
+  if (buttonLink2) {
+        buttonLink2.href = links.signup;
+  };
+
+  console.log("Final result --> " + buttonLink2.href);
+
+
+  // document.querySelector('a[name="About"]').href = links.about;
+  // document.querySelector('a[name="Contact"]').href = links.contact;
+  // document.querySelector('a[name="Terms"]').href = links.terms;
+  // document.querySelector('a[name="Privacy"]').href = links.privacypolicy;
+}
+
+
+function handleLanguageChange(languageCode) {
+  console.log("Language changed to: " + languageCode);
+  switch (languageCode) {
+    case 'default':
+      document.documentElement.lang = 'en';
+      //updateLinks('en');
+      break;
+    case 'iJOmsbIM1':
+      document.documentElement.lang = 'sv-SE';
+      //updateLinks('sv');
+      break;
+    default:
+      document.documentElement.lang = 'en';
+      //updateLinks('en');
+      break;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('change', function(event) {
+    if (event.target.parentElement && event.target.parentElement.classList.contains('framer-locale-picker')) {
+      handleLanguageChange(event.target.value);
+    }
+  });
+});
+
+
+
+</script>

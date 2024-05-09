@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("-----Head-End---DOMContentLoaded---");
+  const languageSelector = document.querySelector('.framer-locale-picker select');
+  console.log("Language Selector --> " + languageSelector);
+
+  if (languageSelector) {
+    console.log("Adding CHANGE event listener to the language selector");
+    languageSelector.addEventListener('change', function() {
+      console.log("Change event listener triggered...");
+
+      language = this.options[this.selectedIndex].textContent;
+      console.log("Extracting language from the language picker --> " + language);
+      switch (language) {
+        case 'English': 
+          console.log("Setting lang to en ");
+          // window.location.replace('/');
+          document.documentElement.lang = "en";
+          break;
+        case 'Svenska': 
+          console.log("Setting lang to sv-SE")
+          // window.location.replace('/sv');
+          document.documentElement.lang = "sv-SE";
+          break;
+        default: // Default to English
+          console.log("Setting lang to en ");
+          // window.location.replace('/');
+          document.documentElement.lang = "en";
+          break;
+      }
+    });
+  } else {
+    console.error('Required elements not found on the page!');
+  }
+});
